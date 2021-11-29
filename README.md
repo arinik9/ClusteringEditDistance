@@ -16,6 +16,7 @@ This program aims at calculating the edit distance between two or more membershi
 
 Moreover, this program also allows through the option *isRelativeMembershipAsOutput* to transform the second membership vector in input into another membership vector, so that node clustering labels are much more in common with those of the first clustering. The reason of proposing this option is described as follows. The cost of an edit operation is not always minimal. This is because two membership vectors, i.e. the cluster labels of two partitions, can be very different, but essentially suggest very similar cluster assignments for the vertices. Before calculating the edit distance between two membership vectors, we need to select one of two membership vectors as a reference vector in order to adapt the module assignments of the other membership vector based on the reference one. Hence, the edit distance is calculated between the reference vector and this newly changed one, that we call relative vector.
 
+See Section C.1 in *[Arınık'21]* for more details.
 
 
 ### Input parameters
@@ -47,3 +48,6 @@ Check the scripts`run.sh` and `run2.sh` to see how to run *ClusteringEditDistanc
 In the pair mode, there is no output file for the former, just writing in console output. 
 
 In the batch mode, a distance matrix file is created in the output directory.
+
+
+* **[Arınık'21]** N. Arınık, [*Multiplicity in the Partitioning of Signed Graphs*](https://www.theses.fr/2021AVIG0285). PhD thesis in Avignon Université (2021).
